@@ -7,22 +7,33 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		CDEFFC82271D87470031E240 /* AppPopView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDEFFC81271D87470031E240 /* AppPopView.swift */; };
+		CD14BF3E271EB7A3006141A1 /* Stem in Frameworks */ = {isa = PBXBuildFile; productRef = CD14BF3D271EB7A3006141A1 /* Stem */; };
+		CD14BF40271EB847006141A1 /* UserApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD14BF3F271EB847006141A1 /* UserApp.swift */; };
+		CD14BF42271EB867006141A1 /* PinApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD14BF41271EB867006141A1 /* PinApp.swift */; };
+		CD14BF44271ECC97006141A1 /* AlliancesConfiguration+EX.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD14BF43271ECC97006141A1 /* AlliancesConfiguration+EX.swift */; };
+		CD14BF46271ED29A006141A1 /* StatusCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD14BF45271ED29A006141A1 /* StatusCell.swift */; };
+		CDEFFC82271D87470031E240 /* StatusView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDEFFC81271D87470031E240 /* StatusView.swift */; };
 		CDEFFC84271D874A0031E240 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CDEFFC83271D874A0031E240 /* Assets.xcassets */; };
 		CDEFFC87271D874A0031E240 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CDEFFC86271D874A0031E240 /* Preview Assets.xcassets */; };
 		CDEFFC8F271D88930031E240 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDEFFC8E271D88930031E240 /* AppDelegate.swift */; };
 		CDEFFC91271D8C3E0031E240 /* App.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDEFFC90271D8C3E0031E240 /* App.swift */; };
 		CDEFFC94271D94450031E240 /* Alliances in Frameworks */ = {isa = PBXBuildFile; productRef = CDEFFC93271D94450031E240 /* Alliances */; };
+		CDEFFC96271E9D1F0031E240 /* AlliancesManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDEFFC95271E9D1F0031E240 /* AlliancesManager.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		CD14BF3F271EB847006141A1 /* UserApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserApp.swift; sourceTree = "<group>"; };
+		CD14BF41271EB867006141A1 /* PinApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PinApp.swift; sourceTree = "<group>"; };
+		CD14BF43271ECC97006141A1 /* AlliancesConfiguration+EX.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "AlliancesConfiguration+EX.swift"; sourceTree = "<group>"; };
+		CD14BF45271ED29A006141A1 /* StatusCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StatusCell.swift; sourceTree = "<group>"; };
 		CDEFFC7C271D87470031E240 /* Axe.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Axe.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		CDEFFC81271D87470031E240 /* AppPopView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppPopView.swift; sourceTree = "<group>"; };
+		CDEFFC81271D87470031E240 /* StatusView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StatusView.swift; sourceTree = "<group>"; };
 		CDEFFC83271D874A0031E240 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		CDEFFC86271D874A0031E240 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		CDEFFC88271D874A0031E240 /* Axe.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Axe.entitlements; sourceTree = "<group>"; };
 		CDEFFC8E271D88930031E240 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		CDEFFC90271D8C3E0031E240 /* App.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = App.swift; sourceTree = "<group>"; };
+		CDEFFC95271E9D1F0031E240 /* AlliancesManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlliancesManager.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -31,6 +42,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				CDEFFC94271D94450031E240 /* Alliances in Frameworks */,
+				CD14BF3E271EB7A3006141A1 /* Stem in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -56,12 +68,17 @@
 		CDEFFC7E271D87470031E240 /* Axe */ = {
 			isa = PBXGroup;
 			children = (
-				CDEFFC81271D87470031E240 /* AppPopView.swift */,
+				CDEFFC81271D87470031E240 /* StatusView.swift */,
+				CD14BF45271ED29A006141A1 /* StatusCell.swift */,
 				CDEFFC83271D874A0031E240 /* Assets.xcassets */,
 				CDEFFC88271D874A0031E240 /* Axe.entitlements */,
 				CDEFFC85271D874A0031E240 /* Preview Content */,
 				CDEFFC8E271D88930031E240 /* AppDelegate.swift */,
+				CDEFFC95271E9D1F0031E240 /* AlliancesManager.swift */,
+				CD14BF3F271EB847006141A1 /* UserApp.swift */,
 				CDEFFC90271D8C3E0031E240 /* App.swift */,
+				CD14BF41271EB867006141A1 /* PinApp.swift */,
+				CD14BF43271ECC97006141A1 /* AlliancesConfiguration+EX.swift */,
 			);
 			path = Axe;
 			sourceTree = "<group>";
@@ -92,6 +109,7 @@
 			name = Axe;
 			packageProductDependencies = (
 				CDEFFC93271D94450031E240 /* Alliances */,
+				CD14BF3D271EB7A3006141A1 /* Stem */,
 			);
 			productName = Axe;
 			productReference = CDEFFC7C271D87470031E240 /* Axe.app */;
@@ -123,6 +141,7 @@
 			mainGroup = CDEFFC73271D87470031E240;
 			packageReferences = (
 				CDEFFC92271D94450031E240 /* XCRemoteSwiftPackageReference "Alliances" */,
+				CD14BF3C271EB7A3006141A1 /* XCRemoteSwiftPackageReference "Stem" */,
 			);
 			productRefGroup = CDEFFC7D271D87470031E240 /* Products */;
 			projectDirPath = "";
@@ -150,9 +169,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CDEFFC96271E9D1F0031E240 /* AlliancesManager.swift in Sources */,
+				CD14BF40271EB847006141A1 /* UserApp.swift in Sources */,
 				CDEFFC91271D8C3E0031E240 /* App.swift in Sources */,
 				CDEFFC8F271D88930031E240 /* AppDelegate.swift in Sources */,
-				CDEFFC82271D87470031E240 /* AppPopView.swift in Sources */,
+				CDEFFC82271D87470031E240 /* StatusView.swift in Sources */,
+				CD14BF44271ECC97006141A1 /* AlliancesConfiguration+EX.swift in Sources */,
+				CD14BF42271EB867006141A1 /* PinApp.swift in Sources */,
+				CD14BF46271ED29A006141A1 /* StatusCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -354,6 +378,14 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
+		CD14BF3C271EB7A3006141A1 /* XCRemoteSwiftPackageReference "Stem" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/linhay/Stem.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 1.0.0;
+			};
+		};
 		CDEFFC92271D94450031E240 /* XCRemoteSwiftPackageReference "Alliances" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/Mechagnome/Alliances";
@@ -365,6 +397,11 @@
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
+		CD14BF3D271EB7A3006141A1 /* Stem */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = CD14BF3C271EB7A3006141A1 /* XCRemoteSwiftPackageReference "Stem" */;
+			productName = Stem;
+		};
 		CDEFFC93271D94450031E240 /* Alliances */ = {
 			isa = XCSwiftPackageProductDependency;
 			package = CDEFFC92271D94450031E240 /* XCRemoteSwiftPackageReference "Alliances" */;

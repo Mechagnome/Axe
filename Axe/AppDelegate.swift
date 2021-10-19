@@ -20,7 +20,8 @@ class AppDelegate: NSObject, NSApplicationDelegate {
         let view = NSPopover()
         view.behavior = .transient
         view.appearance = NSAppearance(named: .vibrantLight)
-        view.contentViewController = NSHostingController(rootView: AppPopView([]))
+        let apps = Array(AlliancesManager.shared.myApps.prefix(5))
+        view.contentViewController = NSHostingController(rootView: StatusView(apps))
         return view
     }()
         
