@@ -20,7 +20,7 @@ class AppDelegate: NSObject, NSApplicationDelegate {
         let view = NSPopover()
         view.behavior = .transient
         view.appearance = NSAppearance(named: .vibrantLight)
-        view.contentViewController = NSHostingController(rootView: AppPopView())
+        view.contentViewController = NSHostingController(rootView: AppPopView([]))
         return view
     }()
         
