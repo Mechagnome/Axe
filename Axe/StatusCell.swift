@@ -7,6 +7,7 @@
 
 import SwiftUI
 import Alliances
+import Stem
 
 struct StatusCell: View {
     
@@ -16,25 +17,35 @@ struct StatusCell: View {
     
     var body: some View {
         VStack {
-            HStack {
-                VStack {
+            HStack(alignment: .center) {
+                VStack(alignment: .leading) {
                     Text(app.name)
                     if let value = app.remark {
                         Text(value)
                     }
                 }
-                Button("Run") {
-                    try? app.run()
-                }
-                Button("Settings") {
-                    app.openSettings()
+                
+                Spacer()
+                
+                HStack {
+                    SFSymbol.play.convert()
+                        .onTapGesture {
+                            try? app.run()
+                        }
+                    
+                    SFSymbol.gear.convert()
+                        .onTapGesture {
+                            app.openSettings()
+                            
+                        }
                 }
             }
             
             if app.progress > 0 {
                 ProgressView(value: app.progress)
             }
-        }
+            
+        }.padding()
     }
     
 }

@@ -14,9 +14,9 @@
         "package": "Stem",
         "repositoryURL": "https://github.com/linhay/Stem.git",
         "state": {
-          "branch": null,
-          "revision": "a38ef7f10fc12a24bcf2b57d2d099359db17f694",
-          "version": "1.0.0"
+          "branch": "master",
+          "revision": "7cb40df38f35d234bd2544d3c7849764dbba35d7",
+          "version": null
         }
       }
     ]

@@ -382,8 +382,8 @@
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/linhay/Stem.git";
 			requirement = {
-				kind = upToNextMajorVersion;
-				minimumVersion = 1.0.0;
+				branch = master;
+				kind = branch;
 			};
 		};
 		CDEFFC92271D94450031E240 /* XCRemoteSwiftPackageReference "Alliances" */ = {
