@@ -29,13 +29,22 @@ public struct TestApp: AlliancesApp {
                       ChildApp(.init(from: configuration, app: ChildApp.self))]
     }
     
+    public var settingsView: AnyView? {
+        .init(VStack {
+            Text("1111")
+            Text("1111")
+            Text("1111")
+            Text("1111")
+            Text("1111")
+        }.frame(width: 300, height: 300))
+    }
+    
     public func run() throws {
         progress += 0.05
-        show(view: AnyView(Text("66666666")))
+        show(view: AnyView(Text("66666666").frame(width: 300, height: 300)))
     }
     
 }
-
 
 extension TestApp {
     

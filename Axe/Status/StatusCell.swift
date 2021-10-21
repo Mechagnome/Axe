@@ -16,17 +16,10 @@ struct StatusCell: View {
         
         var userApp: UserApp
         var childApps: [UserApp] = []
-
+        
         private var cancellables = Set<AnyCancellable>()
-        private lazy var settingsWindow: NSWindow = {
-           let item = NSWindow(contentRect: NSRect(x: 0, y: 0, width: 400, height: 600),
-                     styleMask: [.titled, .closable],
-                     backing: .buffered,
-                     defer: false)
-            item.isReleasedWhenClosed = false
-            item.center()
-            return item
-        }()
+        private var settingsWindow: NSWindow?
+        private var windows = [NSWindow]()
         
         init(_ userApp: UserApp) {
             self.userApp = userApp
@@ -50,10 +43,24 @@ struct StatusCell: View {
             
             userApp.app.core.showView.sink {[weak self] view in
                 guard let self = self else { return }
-                self.settingsWindow.contentView = NSHostingView(rootView: view)
-                self.settingsWindow.makeKey()
-                self.settingsWindow.orderFrontRegardless()
+                self.windows.append(self.openInWindow(title: userApp.app.name, sender: view))
             }.store(in: &cancellables)
+        }
+        
+        func openInWindow(title: String, sender: AnyView?, level: NSWindow.Level = .normal) -> NSWindow {
+            let controller = NSHostingController(rootView: sender?.fixedSize())
+            let win = NSWindow(contentViewController: controller)
+            win.center()
+            win.contentViewController = controller
+            win.title = title
+            win.level = level
+            win.makeKeyAndOrderFront(sender)
+            return win
+        }
+        
+        func openSettingsWindow() {
+            self.settingsWindow?.close()
+            self.settingsWindow = openInWindow(title: "settings", sender: userApp.app.settingsView, level: .popUpMenu)
         }
         
         func reload() {
@@ -101,7 +108,7 @@ struct StatusCell: View {
                     if app.canOpenSettings {
                         SFSymbol.gear.convert()
                             .onTapGesture {
-                                try? self.app.openSettings()
+                                vm.openSettingsWindow()
                             }
                     }
                 }
