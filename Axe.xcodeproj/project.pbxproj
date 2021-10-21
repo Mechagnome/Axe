@@ -9,11 +9,11 @@
 /* Begin PBXBuildFile section */
 		CD14BF3E271EB7A3006141A1 /* Stem in Frameworks */ = {isa = PBXBuildFile; productRef = CD14BF3D271EB7A3006141A1 /* Stem */; };
 		CD14BF40271EB847006141A1 /* UserApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD14BF3F271EB847006141A1 /* UserApp.swift */; };
-		CD14BF42271EB867006141A1 /* PinApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD14BF41271EB867006141A1 /* PinApp.swift */; };
 		CD14BF44271ECC97006141A1 /* AlliancesConfiguration+EX.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD14BF43271ECC97006141A1 /* AlliancesConfiguration+EX.swift */; };
 		CD14BF46271ED29A006141A1 /* StatusCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD14BF45271ED29A006141A1 /* StatusCell.swift */; };
 		CD5C08B4272026CD000E0305 /* RoundedCorners.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD5C08B3272026CD000E0305 /* RoundedCorners.swift */; };
 		CD5C08B62721035B000E0305 /* StatusPreferencesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD5C08B52721035B000E0305 /* StatusPreferencesView.swift */; };
+		CDC51369272118FB0091A378 /* ModularizationHelper in Frameworks */ = {isa = PBXBuildFile; productRef = CDC51368272118FB0091A378 /* ModularizationHelper */; };
 		CDEFFC82271D87470031E240 /* StatusView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDEFFC81271D87470031E240 /* StatusView.swift */; };
 		CDEFFC84271D874A0031E240 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CDEFFC83271D874A0031E240 /* Assets.xcassets */; };
 		CDEFFC87271D874A0031E240 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CDEFFC86271D874A0031E240 /* Preview Assets.xcassets */; };
@@ -25,7 +25,6 @@
 
 /* Begin PBXFileReference section */
 		CD14BF3F271EB847006141A1 /* UserApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserApp.swift; sourceTree = "<group>"; };
-		CD14BF41271EB867006141A1 /* PinApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PinApp.swift; sourceTree = "<group>"; };
 		CD14BF43271ECC97006141A1 /* AlliancesConfiguration+EX.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "AlliancesConfiguration+EX.swift"; sourceTree = "<group>"; };
 		CD14BF45271ED29A006141A1 /* StatusCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StatusCell.swift; sourceTree = "<group>"; };
 		CD5C08B3272026CD000E0305 /* RoundedCorners.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoundedCorners.swift; sourceTree = "<group>"; };
@@ -47,6 +46,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				CDEFFC94271D94450031E240 /* Alliances in Frameworks */,
+				CDC51369272118FB0091A378 /* ModularizationHelper in Frameworks */,
 				CD14BF3E271EB7A3006141A1 /* Stem in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -93,7 +93,6 @@
 				CDEFFC95271E9D1F0031E240 /* AlliancesManager.swift */,
 				CD14BF3F271EB847006141A1 /* UserApp.swift */,
 				CDEFFC90271D8C3E0031E240 /* App.swift */,
-				CD14BF41271EB867006141A1 /* PinApp.swift */,
 				CD14BF43271ECC97006141A1 /* AlliancesConfiguration+EX.swift */,
 			);
 			path = Axe;
@@ -126,6 +125,7 @@
 			packageProductDependencies = (
 				CDEFFC93271D94450031E240 /* Alliances */,
 				CD14BF3D271EB7A3006141A1 /* Stem */,
+				CDC51368272118FB0091A378 /* ModularizationHelper */,
 			);
 			productName = Axe;
 			productReference = CDEFFC7C271D87470031E240 /* Axe.app */;
@@ -158,6 +158,7 @@
 			packageReferences = (
 				CDEFFC92271D94450031E240 /* XCRemoteSwiftPackageReference "Alliances" */,
 				CD14BF3C271EB7A3006141A1 /* XCRemoteSwiftPackageReference "Stem" */,
+				CDC51367272118FB0091A378 /* XCRemoteSwiftPackageReference "ModularizationHelper" */,
 			);
 			productRefGroup = CDEFFC7D271D87470031E240 /* Products */;
 			projectDirPath = "";
@@ -192,7 +193,6 @@
 				CDEFFC8F271D88930031E240 /* AppDelegate.swift in Sources */,
 				CDEFFC82271D87470031E240 /* StatusView.swift in Sources */,
 				CD14BF44271ECC97006141A1 /* AlliancesConfiguration+EX.swift in Sources */,
-				CD14BF42271EB867006141A1 /* PinApp.swift in Sources */,
 				CD5C08B4272026CD000E0305 /* RoundedCorners.swift in Sources */,
 				CD14BF46271ED29A006141A1 /* StatusCell.swift in Sources */,
 			);
@@ -406,6 +406,14 @@
 				kind = branch;
 			};
 		};
+		CDC51367272118FB0091A378 /* XCRemoteSwiftPackageReference "ModularizationHelper" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/Mechagnome/ModularizationHelper.git";
+			requirement = {
+				branch = master;
+				kind = branch;
+			};
+		};
 		CDEFFC92271D94450031E240 /* XCRemoteSwiftPackageReference "Alliances" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/Mechagnome/Alliances";
@@ -421,6 +429,11 @@
 			isa = XCSwiftPackageProductDependency;
 			package = CD14BF3C271EB7A3006141A1 /* XCRemoteSwiftPackageReference "Stem" */;
 			productName = Stem;
+		};
+		CDC51368272118FB0091A378 /* ModularizationHelper */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = CDC51367272118FB0091A378 /* XCRemoteSwiftPackageReference "ModularizationHelper" */;
+			productName = ModularizationHelper;
 		};
 		CDEFFC93271D94450031E240 /* Alliances */ = {
 			isa = XCSwiftPackageProductDependency;

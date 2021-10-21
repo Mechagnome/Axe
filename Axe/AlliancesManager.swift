@@ -7,6 +7,7 @@
 
 import Foundation
 import Alliances
+import ModularizationHelper
 
 class AlliancesManager {
     
@@ -23,7 +24,9 @@ extension AlliancesManager {
     }
 
     var myApps: [UserApp] {
-        return [UserApp(id: .init(), createTime: .init(), type: PinApp.self)]
+        return [
+            UserApp(id: .init(), createTime: .init(), type: ModularizationHelper.self)
+        ]
     }
     
 }
