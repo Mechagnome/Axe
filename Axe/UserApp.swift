@@ -44,7 +44,7 @@ struct UserApp: Identifiable {
         var dict = [String: Any]()
         dict["id"] = id.uuidString
         dict["createTime"] = createTime.timeIntervalSince1970
-        dict["app_bundleID"] = type(of: app).bundleID
+        dict["app_bundleID"] = type(of: app).appInfo.id
         return JSON(dict)
     }
     

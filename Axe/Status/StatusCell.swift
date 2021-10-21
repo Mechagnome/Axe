@@ -126,52 +126,10 @@ struct StatusCell: View {
 
 struct StatusCell_Previews: PreviewProvider {
     
-    public struct ChildApp: AlliancesApp {
-        
-        public static let bundleID: String = UUID().uuidString
-        public var core: AlliancesUICore = .init()
-        public var configuration: AlliancesConfiguration
-        
-        public var name: String { Self.bundleID }
-        public var remark: String? { "remark" }
-        public var tasks: [AlliancesApp] = []
-        
-        public init(_ configuration: AlliancesConfiguration) {
-            self.configuration = configuration
-        }
-        
-        public func run() throws {
-            progress += 0.05
-            show(view: AnyView(Text("66666666")))
-        }
-    }
-    
-    public struct TestApp: AlliancesApp {
-        
-        public static let bundleID: String = UUID().uuidString
-        public var core: AlliancesUICore = .init()
-        public var configuration: AlliancesConfiguration
-        
-        public var name: String { Self.bundleID }
-        public var remark: String? { "remark" }
-        public var tasks: [AlliancesApp] = []
-        
-        public init(_ configuration: AlliancesConfiguration) {
-            self.configuration = configuration
-            self.tasks = [ChildApp(.init(from: configuration, app: ChildApp.self)),
-                          ChildApp(.init(from: configuration, app: ChildApp.self))]
-        }
-        
-        public func run() throws {
-            progress += 0.05
-            show(view: AnyView(Text("66666666")))
-        }
-    }
-    
     static var previews: some View {
         VStack {
-            StatusCell(UserApp(id: .init(), type: TestApp.self))
-            StatusCell(UserApp(id: .init(), type: TestApp.self))
+            StatusCell(TestApp.useApp)
+            StatusCell(TestApp.useApp)
         }
         .fixedSize()
     }

@@ -12,7 +12,8 @@ import Stem
 extension AlliancesConfiguration {
     
     public convenience init(sanbox: UUID, app: AlliancesApp.Type) {
-        self.init(folder: try! FilePath.Folder(sanbox: .library).create(folder: app.bundleID + "_" + (sanbox.uuidString)))
+        self.init(folder: try! FilePath.Folder(sanbox: .library)
+                    .create(folder: [app.appInfo.id, sanbox.uuidString].joined(separator: "_")))
     }
     
 }
