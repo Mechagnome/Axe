@@ -18,10 +18,15 @@ struct StatusCell: View {
         var childApps: [UserApp]
 
         private var cancellables = Set<AnyCancellable>()
-        private lazy var settingsWindow = NSWindow(contentRect: .init(origin: .zero,
-                                                                      size: .init(width: 400, height: 600)),
-                                                   styleMask: [.titled, .closable],
-                                                   backing: .buffered, defer: false)
+        private lazy var settingsWindow: NSWindow = {
+           let item = NSWindow(contentRect: NSRect(x: 0, y: 0, width: 400, height: 600),
+                     styleMask: [.titled, .closable],
+                     backing: .buffered,
+                     defer: false)
+            item.isReleasedWhenClosed = false
+            item.center()
+            return item
+        }()
         
         init(_ userApp: UserApp) {
             self.userApp = userApp
@@ -45,9 +50,11 @@ struct StatusCell: View {
                 self.objectWillChange.send()
             }.store(in: &cancellables)
             
-            userApp.app.core.showView.sink { view in
+            userApp.app.core.showView.sink {[weak self] view in
+                guard let self = self else { return }
                 self.settingsWindow.contentView = NSHostingView(rootView: view)
-                self.settingsWindow.makeKeyAndOrderFront(nil)
+                self.settingsWindow.makeKey()
+                self.settingsWindow.orderFrontRegardless()
             }.store(in: &cancellables)
         }
     }
