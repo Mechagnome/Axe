@@ -41,6 +41,10 @@ struct StatusCell: View {
                 self.objectWillChange.send()
             }.store(in: &cancellables)
             
+            userApp.app.core.showSettingsView.sink { _ in
+                self.openSettingsWindow()
+            }.store(in: &cancellables)
+            
             userApp.app.core.showView.sink {[weak self] view in
                 guard let self = self else { return }
                 self.windows.append(self.openInWindow(title: userApp.app.name, sender: view))
@@ -70,8 +74,6 @@ struct StatusCell: View {
             self.objectWillChange.send()
         }
     }
-    
-    
     
     @ObservedObject
     private var vm: ViewModel

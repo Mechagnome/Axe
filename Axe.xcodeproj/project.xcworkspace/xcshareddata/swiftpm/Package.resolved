@@ -6,7 +6,7 @@
         "repositoryURL": "https://github.com/Mechagnome/Alliances",
         "state": {
           "branch": "master",
-          "revision": "078a6b7a6fbd6e99940fdce90b5d1a2372c104cd",
+          "revision": "d2ee0fdb20f250edd51d5c6416b68de5c6c42e74",
           "version": null
         }
       },
@@ -33,7 +33,7 @@
         "repositoryURL": "https://github.com/Mechagnome/ModularizationHelper.git",
         "state": {
           "branch": "master",
-          "revision": "8ecc96d84275c2fa254edcbef43f198ef3e0a051",
+          "revision": "a499c9228649d86fa4c74ef8486d940a8229b0a2",
           "version": null
         }
       },
