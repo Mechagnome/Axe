@@ -15,7 +15,7 @@ struct StatusCell: View {
     private class ViewModel: ObservableObject {
         
         var userApp: UserApp
-        var childApps: [UserApp]
+        var childApps: [UserApp] = []
 
         private var cancellables = Set<AnyCancellable>()
         private lazy var settingsWindow: NSWindow = {
@@ -30,9 +30,7 @@ struct StatusCell: View {
         
         init(_ userApp: UserApp) {
             self.userApp = userApp
-            self.childApps = userApp.app.tasks.map({ app in
-                UserApp(app: app)
-            })
+            reload()
             
             userApp.app.core.canOpenSettings.sink { _ in
                 self.objectWillChange.send()
@@ -43,7 +41,7 @@ struct StatusCell: View {
             }.store(in: &cancellables)
             
             userApp.app.core.reload.sink { _ in
-                self.objectWillChange.send()
+                self.reload()
             }.store(in: &cancellables)
             
             userApp.app.core.progress.sink { _ in
@@ -57,7 +55,16 @@ struct StatusCell: View {
                 self.settingsWindow.orderFrontRegardless()
             }.store(in: &cancellables)
         }
+        
+        func reload() {
+            self.childApps = userApp.app.tasks.map({ app in
+                UserApp(app: app)
+            })
+            self.objectWillChange.send()
+        }
     }
+    
+    
     
     @ObservedObject
     private var vm: ViewModel
