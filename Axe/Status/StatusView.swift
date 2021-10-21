@@ -8,6 +8,7 @@
 import SwiftUI
 import Alliances
 import Combine
+import Stem
 
 struct StatusView: View {
     
@@ -15,26 +16,11 @@ struct StatusView: View {
         
         var list: [UserApp] = []
         private var cancellables = Set<AnyCancellable>()
-        
+        @State
+        var searchTerm = ""
+
         init(_ list: [UserApp]) {
             self.list = list
-            for item in list {
-                item.app.core.canOpenSettings.sink { _ in
-                    self.objectWillChange.send()
-                }.store(in: &cancellables)
-                
-                item.app.core.canRun.sink { _ in
-                    self.objectWillChange.send()
-                }.store(in: &cancellables)
-                
-                item.app.core.reload.sink { _ in
-                    self.objectWillChange.send()
-                }.store(in: &cancellables)
-                
-                item.app.core.progress.sink { _ in
-                    self.objectWillChange.send()
-                }.store(in: &cancellables)
-            }
         }
     }
     
@@ -47,9 +33,24 @@ struct StatusView: View {
     }
     
     var body: some View {
-        List(vm.list) { model in
-            StatusCell(model: model)
+        
+        VStack {
+            HStack(alignment: .center) {
+                TextField("Search", text: $vm.searchTerm)
+                    .textFieldStyle(RoundedBorderTextFieldStyle())
+                StatusPreferencesView()
+            }
+            .font(Font.system(size: 14))
+
+            Divider(
+            )
+            ForEach(vm.list) { model in
+                StatusCell(model)
+            }
+            Spacer()
         }
+        .padding(.all, 12)
+        .frame(minWidth: 300, minHeight: 400)
     }
 }
 
@@ -64,7 +65,7 @@ struct StatusView_Previews: PreviewProvider {
         public var name: String { Self.bundleID }
         public var remark: String? { "remark" }
         public var tasks: [AlliancesApp] = []
-
+        
         public init(_ configuration: AlliancesConfiguration) {
             self.configuration = configuration
         }
@@ -72,7 +73,7 @@ struct StatusView_Previews: PreviewProvider {
         public func openSettings() {
             progress -= 0.05
         }
-
+        
         public func run() throws {
             progress += 0.05
         }

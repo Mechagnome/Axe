@@ -12,6 +12,8 @@
 		CD14BF42271EB867006141A1 /* PinApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD14BF41271EB867006141A1 /* PinApp.swift */; };
 		CD14BF44271ECC97006141A1 /* AlliancesConfiguration+EX.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD14BF43271ECC97006141A1 /* AlliancesConfiguration+EX.swift */; };
 		CD14BF46271ED29A006141A1 /* StatusCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD14BF45271ED29A006141A1 /* StatusCell.swift */; };
+		CD5C08B4272026CD000E0305 /* RoundedCorners.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD5C08B3272026CD000E0305 /* RoundedCorners.swift */; };
+		CD5C08B62721035B000E0305 /* StatusPreferencesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD5C08B52721035B000E0305 /* StatusPreferencesView.swift */; };
 		CDEFFC82271D87470031E240 /* StatusView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDEFFC81271D87470031E240 /* StatusView.swift */; };
 		CDEFFC84271D874A0031E240 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CDEFFC83271D874A0031E240 /* Assets.xcassets */; };
 		CDEFFC87271D874A0031E240 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CDEFFC86271D874A0031E240 /* Preview Assets.xcassets */; };
@@ -26,6 +28,9 @@
 		CD14BF41271EB867006141A1 /* PinApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PinApp.swift; sourceTree = "<group>"; };
 		CD14BF43271ECC97006141A1 /* AlliancesConfiguration+EX.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "AlliancesConfiguration+EX.swift"; sourceTree = "<group>"; };
 		CD14BF45271ED29A006141A1 /* StatusCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StatusCell.swift; sourceTree = "<group>"; };
+		CD5C08B3272026CD000E0305 /* RoundedCorners.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoundedCorners.swift; sourceTree = "<group>"; };
+		CD5C08B52721035B000E0305 /* StatusPreferencesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StatusPreferencesView.swift; sourceTree = "<group>"; };
+		CD5C08B827210C7C000E0305 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 		CDEFFC7C271D87470031E240 /* Axe.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Axe.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CDEFFC81271D87470031E240 /* StatusView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StatusView.swift; sourceTree = "<group>"; };
 		CDEFFC83271D874A0031E240 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -49,6 +54,16 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		CD5C08B727210365000E0305 /* Status */ = {
+			isa = PBXGroup;
+			children = (
+				CDEFFC81271D87470031E240 /* StatusView.swift */,
+				CD14BF45271ED29A006141A1 /* StatusCell.swift */,
+				CD5C08B52721035B000E0305 /* StatusPreferencesView.swift */,
+			);
+			path = Status;
+			sourceTree = "<group>";
+		};
 		CDEFFC73271D87470031E240 = {
 			isa = PBXGroup;
 			children = (
@@ -68,8 +83,9 @@
 		CDEFFC7E271D87470031E240 /* Axe */ = {
 			isa = PBXGroup;
 			children = (
-				CDEFFC81271D87470031E240 /* StatusView.swift */,
-				CD14BF45271ED29A006141A1 /* StatusCell.swift */,
+				CD5C08B827210C7C000E0305 /* Info.plist */,
+				CD5C08B727210365000E0305 /* Status */,
+				CD5C08B3272026CD000E0305 /* RoundedCorners.swift */,
 				CDEFFC83271D874A0031E240 /* Assets.xcassets */,
 				CDEFFC88271D874A0031E240 /* Axe.entitlements */,
 				CDEFFC85271D874A0031E240 /* Preview Content */,
@@ -172,10 +188,12 @@
 				CDEFFC96271E9D1F0031E240 /* AlliancesManager.swift in Sources */,
 				CD14BF40271EB847006141A1 /* UserApp.swift in Sources */,
 				CDEFFC91271D8C3E0031E240 /* App.swift in Sources */,
+				CD5C08B62721035B000E0305 /* StatusPreferencesView.swift in Sources */,
 				CDEFFC8F271D88930031E240 /* AppDelegate.swift in Sources */,
 				CDEFFC82271D87470031E240 /* StatusView.swift in Sources */,
 				CD14BF44271ECC97006141A1 /* AlliancesConfiguration+EX.swift in Sources */,
 				CD14BF42271EB867006141A1 /* PinApp.swift in Sources */,
+				CD5C08B4272026CD000E0305 /* RoundedCorners.swift in Sources */,
 				CD14BF46271ED29A006141A1 /* StatusCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -312,6 +330,7 @@
 				ENABLE_HARDENED_RUNTIME = YES;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = Axe/Info.plist;
 				INFOPLIST_KEY_NSHumanReadableCopyright = "";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -340,6 +359,7 @@
 				ENABLE_HARDENED_RUNTIME = YES;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = Axe/Info.plist;
 				INFOPLIST_KEY_NSHumanReadableCopyright = "";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
