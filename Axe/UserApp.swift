@@ -16,6 +16,12 @@ struct UserApp: Identifiable {
     
     let createTime: Date
     
+    init(createTime: Date = .init(), app: AlliancesApp) {
+        self.createTime = createTime
+        self.app = app
+        self.id = UUID()
+    }
+    
     init(id: UUID, createTime: Date = .init(), type: AlliancesApp.Type) {
         self.id = id
         self.createTime = createTime

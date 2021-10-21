@@ -15,7 +15,8 @@ struct StatusCell: View {
     private class ViewModel: ObservableObject {
         
         var userApp: UserApp
-        
+        var childApps: [UserApp]
+
         private var cancellables = Set<AnyCancellable>()
         private lazy var settingsWindow = NSWindow(contentRect: .init(origin: .zero,
                                                                       size: .init(width: 400, height: 600)),
@@ -24,6 +25,10 @@ struct StatusCell: View {
         
         init(_ userApp: UserApp) {
             self.userApp = userApp
+            self.childApps = userApp.app.tasks.map({ app in
+                UserApp(app: app)
+            })
+            
             userApp.app.core.canOpenSettings.sink { _ in
                 self.objectWillChange.send()
             }.store(in: &cancellables)
@@ -82,17 +87,21 @@ struct StatusCell: View {
                     if app.canOpenSettings {
                         SFSymbol.gear.convert()
                             .onTapGesture {
-                                
-                                
+                                try? self.app.openSettings()
                             }
                     }
                 }
                 .font(.title)
             }
             
-            if app.progress > 0 {
+            if app.progress > 0, app.progress <= 1 {
                 ProgressView(value: app.progress)
             }
+            
+            ForEach(vm.childApps) { app in
+                StatusCell(app)
+            }
+            
         }
         .padding()
         .background(RoundedCorners(value: 12, color: Color.gray.opacity(0.25)))
@@ -103,7 +112,7 @@ struct StatusCell: View {
 
 struct StatusCell_Previews: PreviewProvider {
     
-    public struct TestApp: AlliancesApp {
+    public struct ChildApp: AlliancesApp {
         
         public static let bundleID: String = UUID().uuidString
         public var core: AlliancesUICore = .init()
@@ -123,10 +132,33 @@ struct StatusCell_Previews: PreviewProvider {
         }
     }
     
+    public struct TestApp: AlliancesApp {
+        
+        public static let bundleID: String = UUID().uuidString
+        public var core: AlliancesUICore = .init()
+        public var configuration: AlliancesConfiguration
+        
+        public var name: String { Self.bundleID }
+        public var remark: String? { "remark" }
+        public var tasks: [AlliancesApp] = []
+        
+        public init(_ configuration: AlliancesConfiguration) {
+            self.configuration = configuration
+            self.tasks = [ChildApp(.init(from: configuration, app: ChildApp.self)),
+                          ChildApp(.init(from: configuration, app: ChildApp.self))]
+        }
+        
+        public func run() throws {
+            progress += 0.05
+            show(view: AnyView(Text("66666666")))
+        }
+    }
+    
     static var previews: some View {
         VStack {
             StatusCell(UserApp(id: .init(), type: TestApp.self))
             StatusCell(UserApp(id: .init(), type: TestApp.self))
         }
+        .fixedSize()
     }
 }
