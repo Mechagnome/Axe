@@ -10,6 +10,7 @@ import Alliances
 import ModularizationHelper
 import Stem
 import Combine
+import Stenographer
 
 class AlliancesManager {
     
@@ -37,7 +38,8 @@ extension AlliancesManager {
     static var allApps: [AlliancesApp.Type] {
         [
             ModularizationHelper.self,
-            TestApp.self
+            TestApp.self,
+            Stenographer.self
         ]
     }
     
@@ -54,7 +56,7 @@ extension AlliancesManager {
     }
     
     func uninstall(_ app: UserApp) {
-        var apps = myApps.filter({ $0 != app })
+        let apps = myApps.filter({ $0 != app })
         UserDefaults.standard.set(apps.map(\.toJSON).compactMap({ try? $0.rawData() }), forKey: "userApps")
         myAppsDidChanged.send(apps)
     }

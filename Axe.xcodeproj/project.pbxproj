@@ -19,6 +19,7 @@
 		CDC51371272153420091A378 /* TestApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDC51370272153420091A378 /* TestApp.swift */; };
 		CDC51377272253C40091A378 /* UninstallAppCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDC51376272253C40091A378 /* UninstallAppCell.swift */; };
 		CDC51379272255B90091A378 /* UninstallAppsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDC51378272255B90091A378 /* UninstallAppsView.swift */; };
+		CDC5137C2722695F0091A378 /* Stenographer in Frameworks */ = {isa = PBXBuildFile; productRef = CDC5137B2722695F0091A378 /* Stenographer */; };
 		CDEFFC82271D87470031E240 /* StatusView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDEFFC81271D87470031E240 /* StatusView.swift */; };
 		CDEFFC84271D874A0031E240 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CDEFFC83271D874A0031E240 /* Assets.xcassets */; };
 		CDEFFC87271D874A0031E240 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CDEFFC86271D874A0031E240 /* Preview Assets.xcassets */; };
@@ -57,6 +58,7 @@
 			files = (
 				CDEFFC94271D94450031E240 /* Alliances in Frameworks */,
 				CDC51369272118FB0091A378 /* ModularizationHelper in Frameworks */,
+				CDC5137C2722695F0091A378 /* Stenographer in Frameworks */,
 				CD14BF3E271EB7A3006141A1 /* Stem in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -157,6 +159,7 @@
 				CDEFFC93271D94450031E240 /* Alliances */,
 				CD14BF3D271EB7A3006141A1 /* Stem */,
 				CDC51368272118FB0091A378 /* ModularizationHelper */,
+				CDC5137B2722695F0091A378 /* Stenographer */,
 			);
 			productName = Axe;
 			productReference = CDEFFC7C271D87470031E240 /* Axe.app */;
@@ -190,6 +193,7 @@
 				CDEFFC92271D94450031E240 /* XCRemoteSwiftPackageReference "Alliances" */,
 				CD14BF3C271EB7A3006141A1 /* XCRemoteSwiftPackageReference "Stem" */,
 				CDC51367272118FB0091A378 /* XCRemoteSwiftPackageReference "ModularizationHelper" */,
+				CDC5137A2722695F0091A378 /* XCRemoteSwiftPackageReference "Stenographer" */,
 			);
 			productRefGroup = CDEFFC7D271D87470031E240 /* Products */;
 			projectDirPath = "";
@@ -450,6 +454,14 @@
 				kind = branch;
 			};
 		};
+		CDC5137A2722695F0091A378 /* XCRemoteSwiftPackageReference "Stenographer" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/Mechagnome/Stenographer.git";
+			requirement = {
+				branch = master;
+				kind = branch;
+			};
+		};
 		CDEFFC92271D94450031E240 /* XCRemoteSwiftPackageReference "Alliances" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/Mechagnome/Alliances";
@@ -470,6 +482,11 @@
 			isa = XCSwiftPackageProductDependency;
 			package = CDC51367272118FB0091A378 /* XCRemoteSwiftPackageReference "ModularizationHelper" */;
 			productName = ModularizationHelper;
+		};
+		CDC5137B2722695F0091A378 /* Stenographer */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = CDC5137A2722695F0091A378 /* XCRemoteSwiftPackageReference "Stenographer" */;
+			productName = Stenographer;
 		};
 		CDEFFC93271D94450031E240 /* Alliances */ = {
 			isa = XCSwiftPackageProductDependency;

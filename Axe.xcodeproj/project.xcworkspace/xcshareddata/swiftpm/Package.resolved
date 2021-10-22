@@ -56,6 +56,15 @@
         }
       },
       {
+        "package": "Stenographer",
+        "repositoryURL": "https://github.com/Mechagnome/Stenographer.git",
+        "state": {
+          "branch": "master",
+          "revision": "cb91bc71a8c78058a0c497ea1a080894e446d3fa",
+          "version": null
+        }
+      },
+      {
         "package": "swift-argument-parser",
         "repositoryURL": "https://github.com/apple/swift-argument-parser.git",
         "state": {
