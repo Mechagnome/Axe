@@ -18,8 +18,6 @@ struct StatusCell: View {
         var childApps: [UserApp] = []
         
         private var cancellables = Set<AnyCancellable>()
-        private var settingsWindow: NSWindow?
-        private var windows = [NSWindow]()
         
         init(_ userApp: UserApp) {
             self.userApp = userApp
@@ -42,29 +40,12 @@ struct StatusCell: View {
             }.store(in: &cancellables)
             
             userApp.app.core.showSettingsView.sink { _ in
-                self.openSettingsWindow()
+                App.openSettingsWindow(userApp)
             }.store(in: &cancellables)
             
             userApp.app.core.showView.sink {[weak self] view in
-                guard let self = self else { return }
-                self.windows.append(self.openInWindow(title: userApp.app.name, sender: view))
+                App.openInWindow(title: userApp.app.name, sender: view)
             }.store(in: &cancellables)
-        }
-        
-        func openInWindow(title: String, sender: AnyView?, level: NSWindow.Level = .normal) -> NSWindow {
-            let controller = NSHostingController(rootView: sender?.fixedSize())
-            let win = NSWindow(contentViewController: controller)
-            win.center()
-            win.contentViewController = controller
-            win.title = title
-            win.level = level
-            win.makeKeyAndOrderFront(sender)
-            return win
-        }
-        
-        func openSettingsWindow() {
-            self.settingsWindow?.close()
-            self.settingsWindow = openInWindow(title: "settings", sender: userApp.app.settingsView, level: .popUpMenu)
         }
         
         func reload() {
@@ -77,6 +58,9 @@ struct StatusCell: View {
     
     @ObservedObject
     private var vm: ViewModel
+    
+    @State
+    var isPresented = false
     
     init(_ model: UserApp) {
         self.vm = ViewModel(model)
@@ -110,7 +94,7 @@ struct StatusCell: View {
                     if app.canOpenSettings {
                         SFSymbol.gear.convert()
                             .onTapGesture {
-                                vm.openSettingsWindow()
+                                App.openSettingsWindow(vm.userApp)
                             }
                     }
                 }

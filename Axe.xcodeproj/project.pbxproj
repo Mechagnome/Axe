@@ -17,6 +17,8 @@
 		CDC5136C2721526C0091A378 /* StoreAppCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDC5136B2721526C0091A378 /* StoreAppCell.swift */; };
 		CDC5136E2721528B0091A378 /* StoreAppsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDC5136D2721528B0091A378 /* StoreAppsView.swift */; };
 		CDC51371272153420091A378 /* TestApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDC51370272153420091A378 /* TestApp.swift */; };
+		CDC51377272253C40091A378 /* UninstallAppCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDC51376272253C40091A378 /* UninstallAppCell.swift */; };
+		CDC51379272255B90091A378 /* UninstallAppsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDC51378272255B90091A378 /* UninstallAppsView.swift */; };
 		CDEFFC82271D87470031E240 /* StatusView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDEFFC81271D87470031E240 /* StatusView.swift */; };
 		CDEFFC84271D874A0031E240 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CDEFFC83271D874A0031E240 /* Assets.xcassets */; };
 		CDEFFC87271D874A0031E240 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CDEFFC86271D874A0031E240 /* Preview Assets.xcassets */; };
@@ -36,6 +38,8 @@
 		CDC5136B2721526C0091A378 /* StoreAppCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoreAppCell.swift; sourceTree = "<group>"; };
 		CDC5136D2721528B0091A378 /* StoreAppsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoreAppsView.swift; sourceTree = "<group>"; };
 		CDC51370272153420091A378 /* TestApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestApp.swift; sourceTree = "<group>"; };
+		CDC51376272253C40091A378 /* UninstallAppCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UninstallAppCell.swift; sourceTree = "<group>"; };
+		CDC51378272255B90091A378 /* UninstallAppsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UninstallAppsView.swift; sourceTree = "<group>"; };
 		CDEFFC7C271D87470031E240 /* Axe.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Axe.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CDEFFC81271D87470031E240 /* StatusView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StatusView.swift; sourceTree = "<group>"; };
 		CDEFFC83271D874A0031E240 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -74,6 +78,8 @@
 			isa = PBXGroup;
 			children = (
 				CDC5136B2721526C0091A378 /* StoreAppCell.swift */,
+				CDC51376272253C40091A378 /* UninstallAppCell.swift */,
+				CDC51378272255B90091A378 /* UninstallAppsView.swift */,
 				CDC5136D2721528B0091A378 /* StoreAppsView.swift */,
 			);
 			path = Store;
@@ -216,7 +222,9 @@
 				CD14BF40271EB847006141A1 /* UserApp.swift in Sources */,
 				CDEFFC91271D8C3E0031E240 /* App.swift in Sources */,
 				CD5C08B62721035B000E0305 /* StatusPreferencesView.swift in Sources */,
+				CDC51379272255B90091A378 /* UninstallAppsView.swift in Sources */,
 				CDC51371272153420091A378 /* TestApp.swift in Sources */,
+				CDC51377272253C40091A378 /* UninstallAppCell.swift in Sources */,
 				CDC5136E2721528B0091A378 /* StoreAppsView.swift in Sources */,
 				CDEFFC8F271D88930031E240 /* AppDelegate.swift in Sources */,
 				CDEFFC82271D87470031E240 /* StatusView.swift in Sources */,
