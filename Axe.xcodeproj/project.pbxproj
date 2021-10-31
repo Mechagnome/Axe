@@ -13,6 +13,8 @@
 		CD14BF46271ED29A006141A1 /* StatusCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD14BF45271ED29A006141A1 /* StatusCell.swift */; };
 		CD5C08B4272026CD000E0305 /* RoundedCorners.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD5C08B3272026CD000E0305 /* RoundedCorners.swift */; };
 		CD5C08B62721035B000E0305 /* StatusPreferencesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD5C08B52721035B000E0305 /* StatusPreferencesView.swift */; };
+		CDBF282F272D58A700479505 /* AppWindow.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDBF282E272D58A700479505 /* AppWindow.swift */; };
+		CDC17B942729588C001166F3 /* Lancer in Frameworks */ = {isa = PBXBuildFile; productRef = CDC17B932729588C001166F3 /* Lancer */; };
 		CDC51369272118FB0091A378 /* ModularizationHelper in Frameworks */ = {isa = PBXBuildFile; productRef = CDC51368272118FB0091A378 /* ModularizationHelper */; };
 		CDC5136C2721526C0091A378 /* StoreAppCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDC5136B2721526C0091A378 /* StoreAppCell.swift */; };
 		CDC5136E2721528B0091A378 /* StoreAppsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDC5136D2721528B0091A378 /* StoreAppsView.swift */; };
@@ -36,6 +38,7 @@
 		CD5C08B3272026CD000E0305 /* RoundedCorners.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoundedCorners.swift; sourceTree = "<group>"; };
 		CD5C08B52721035B000E0305 /* StatusPreferencesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StatusPreferencesView.swift; sourceTree = "<group>"; };
 		CD5C08B827210C7C000E0305 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
+		CDBF282E272D58A700479505 /* AppWindow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppWindow.swift; sourceTree = "<group>"; };
 		CDC5136B2721526C0091A378 /* StoreAppCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoreAppCell.swift; sourceTree = "<group>"; };
 		CDC5136D2721528B0091A378 /* StoreAppsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoreAppsView.swift; sourceTree = "<group>"; };
 		CDC51370272153420091A378 /* TestApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestApp.swift; sourceTree = "<group>"; };
@@ -56,6 +59,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CDC17B942729588C001166F3 /* Lancer in Frameworks */,
 				CDEFFC94271D94450031E240 /* Alliances in Frameworks */,
 				CDC51369272118FB0091A378 /* ModularizationHelper in Frameworks */,
 				CDC5137C2722695F0091A378 /* Stenographer in Frameworks */,
@@ -123,6 +127,7 @@
 				CDEFFC88271D874A0031E240 /* Axe.entitlements */,
 				CDEFFC85271D874A0031E240 /* Preview Content */,
 				CDEFFC8E271D88930031E240 /* AppDelegate.swift */,
+				CDBF282E272D58A700479505 /* AppWindow.swift */,
 				CDEFFC95271E9D1F0031E240 /* AlliancesManager.swift */,
 				CD14BF3F271EB847006141A1 /* UserApp.swift */,
 				CDEFFC90271D8C3E0031E240 /* App.swift */,
@@ -160,6 +165,7 @@
 				CD14BF3D271EB7A3006141A1 /* Stem */,
 				CDC51368272118FB0091A378 /* ModularizationHelper */,
 				CDC5137B2722695F0091A378 /* Stenographer */,
+				CDC17B932729588C001166F3 /* Lancer */,
 			);
 			productName = Axe;
 			productReference = CDEFFC7C271D87470031E240 /* Axe.app */;
@@ -173,7 +179,7 @@
 			attributes = {
 				BuildIndependentTargetsInParallel = 1;
 				LastSwiftUpdateCheck = 1300;
-				LastUpgradeCheck = 1300;
+				LastUpgradeCheck = 1310;
 				TargetAttributes = {
 					CDEFFC7B271D87470031E240 = {
 						CreatedOnToolsVersion = 13.0;
@@ -194,6 +200,7 @@
 				CD14BF3C271EB7A3006141A1 /* XCRemoteSwiftPackageReference "Stem" */,
 				CDC51367272118FB0091A378 /* XCRemoteSwiftPackageReference "ModularizationHelper" */,
 				CDC5137A2722695F0091A378 /* XCRemoteSwiftPackageReference "Stenographer" */,
+				CDC17B922729588C001166F3 /* XCRemoteSwiftPackageReference "Lancer" */,
 			);
 			productRefGroup = CDEFFC7D271D87470031E240 /* Products */;
 			projectDirPath = "";
@@ -222,6 +229,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				CDEFFC96271E9D1F0031E240 /* AlliancesManager.swift in Sources */,
+				CDBF282F272D58A700479505 /* AppWindow.swift in Sources */,
 				CDC5136C2721526C0091A378 /* StoreAppCell.swift in Sources */,
 				CD14BF40271EB847006141A1 /* UserApp.swift in Sources */,
 				CDEFFC91271D8C3E0031E240 /* App.swift in Sources */,
@@ -362,6 +370,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_ENTITLEMENTS = Axe/Axe.entitlements;
+				CODE_SIGN_IDENTITY = "-";
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
 				CURRENT_PROJECT_VERSION = 1;
@@ -391,6 +400,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_ENTITLEMENTS = Axe/Axe.entitlements;
+				CODE_SIGN_IDENTITY = "-";
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
 				CURRENT_PROJECT_VERSION = 1;
@@ -442,6 +452,14 @@
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/linhay/Stem.git";
 			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 1.0.1;
+			};
+		};
+		CDC17B922729588C001166F3 /* XCRemoteSwiftPackageReference "Lancer" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/Mechagnome/Lancer";
+			requirement = {
 				branch = master;
 				kind = branch;
 			};
@@ -466,8 +484,8 @@
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/Mechagnome/Alliances";
 			requirement = {
-				branch = master;
-				kind = branch;
+				kind = upToNextMajorVersion;
+				minimumVersion = 1.0.0;
 			};
 		};
 /* End XCRemoteSwiftPackageReference section */
@@ -477,6 +495,11 @@
 			isa = XCSwiftPackageProductDependency;
 			package = CD14BF3C271EB7A3006141A1 /* XCRemoteSwiftPackageReference "Stem" */;
 			productName = Stem;
+		};
+		CDC17B932729588C001166F3 /* Lancer */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = CDC17B922729588C001166F3 /* XCRemoteSwiftPackageReference "Lancer" */;
+			productName = Lancer;
 		};
 		CDC51368272118FB0091A378 /* ModularizationHelper */ = {
 			isa = XCSwiftPackageProductDependency;

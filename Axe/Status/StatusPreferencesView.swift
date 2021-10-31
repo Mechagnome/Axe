@@ -13,8 +13,9 @@ struct StatusPreferencesView: View {
     var body: some View {
         MenuButton(label: SFSymbol.gear.convert()) {
             DividerSection(title: "About")
+            Button(action: storeApps, label: { Text("App Store") })
+            Button(action: unstallApps, label: { Text("My Apps") })
             Button(action: quit, label: { Text("Quit") })
-            Button(action: unstallApps, label: { Text("UnstallApps") })
         }
         .menuButtonStyle(BorderlessButtonMenuButtonStyle())
         .fixedSize()
@@ -42,6 +43,10 @@ extension StatusPreferencesView {
 
 private extension StatusPreferencesView {
 
+    func storeApps() {
+        App.openInWindow(title: "App Store", sender: .init(StoreAppsView()))
+    }
+    
     func unstallApps() {
         App.openInWindow(title: "UnstallApps", sender: .init(UninstallAppsView()))
     }

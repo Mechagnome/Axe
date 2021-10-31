@@ -7,6 +7,7 @@
 
 import Cocoa
 import SwiftUI
+import Stem
 
 class AppDelegate: NSObject, NSApplicationDelegate {
     
@@ -26,7 +27,7 @@ class AppDelegate: NSObject, NSApplicationDelegate {
     }()
         
     func applicationDidFinishLaunching(_ aNotification: Notification) {
-        statusItem.button?.image = NSImage(named: "StatusIcon")
+        statusItem.button?.image = SFSymbol.infinity.convert()
         NSEvent.addGlobalMonitorForEvents(matching: .leftMouseDown) { [weak self] (event) in
             if self?.popover.isShown ?? false {
                 self?.popover.close()

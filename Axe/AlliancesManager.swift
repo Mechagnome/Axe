@@ -11,6 +11,7 @@ import ModularizationHelper
 import Stem
 import Combine
 import Stenographer
+import Lancer
 
 class AlliancesManager {
     
@@ -38,8 +39,9 @@ extension AlliancesManager {
     static var allApps: [AlliancesApp.Type] {
         [
             ModularizationHelper.self,
+            Stenographer.self,
             TestApp.self,
-            Stenographer.self
+            Lancer.self,
         ]
     }
     

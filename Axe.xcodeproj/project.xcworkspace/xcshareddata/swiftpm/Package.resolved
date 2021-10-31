@@ -6,7 +6,7 @@
         "repositoryURL": "https://github.com/Mechagnome/Alliances",
         "state": {
           "branch": "master",
-          "revision": "d2ee0fdb20f250edd51d5c6416b68de5c6c42e74",
+          "revision": "54159df0895150146f94b711e51c2d0eea0ebd4a",
           "version": null
         }
       },
@@ -26,6 +26,15 @@
           "branch": null,
           "revision": "d273b5b7025d386feef79ef6bad7de762e106eaf",
           "version": "4.2.0"
+        }
+      },
+      {
+        "package": "Lancer",
+        "repositoryURL": "https://github.com/Mechagnome/Lancer",
+        "state": {
+          "branch": "master",
+          "revision": "94cecab3d52570476b2e42d75e5ca4b3dfe31d24",
+          "version": null
         }
       },
       {
@@ -51,7 +60,7 @@
         "repositoryURL": "https://github.com/linhay/Stem.git",
         "state": {
           "branch": "master",
-          "revision": "8f6444bfc6f36af24994eb435369f144c3236e05",
+          "revision": "bf0c4dc5dd0f153fcc8a46fb40be7cddd53d47dc",
           "version": null
         }
       },
@@ -60,7 +69,7 @@
         "repositoryURL": "https://github.com/Mechagnome/Stenographer.git",
         "state": {
           "branch": "master",
-          "revision": "cb91bc71a8c78058a0c497ea1a080894e446d3fa",
+          "revision": "c755d88f06ead7aa245efb3466c1709ae199f019",
           "version": null
         }
       },
@@ -71,6 +80,15 @@
           "branch": null,
           "revision": "d2930e8fcf9c33162b9fcc1d522bc975e2d4179b",
           "version": "1.0.1"
+        }
+      },
+      {
+        "package": "SwiftShell",
+        "repositoryURL": "https://github.com/kareman/SwiftShell",
+        "state": {
+          "branch": null,
+          "revision": "99680b2efc7c7dbcace1da0b3979d266f02e213c",
+          "version": "5.1.0"
         }
       },
       {

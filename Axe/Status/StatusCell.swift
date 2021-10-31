@@ -43,7 +43,7 @@ struct StatusCell: View {
                 App.openSettingsWindow(userApp)
             }.store(in: &cancellables)
             
-            userApp.app.core.showView.sink {[weak self] view in
+            userApp.app.core.showView.sink { view in
                 App.openInWindow(title: userApp.app.name, sender: view)
             }.store(in: &cancellables)
         }
