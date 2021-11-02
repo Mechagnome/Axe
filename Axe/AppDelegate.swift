@@ -5,14 +5,14 @@
 //  Created by linhey on 2021/10/18.
 //
 
-import Cocoa
+import AppKit
 import SwiftUI
 import Stem
 
 class AppDelegate: NSObject, NSApplicationDelegate {
     
     private lazy var statusItem: NSStatusItem = {
-        let view = NSStatusBar.system.statusItem(withLength: 25)
+        let view = NSStatusBar.system.statusItem(withLength:NSStatusItem.squareLength)
         view.button?.action = #selector(popoverButtonTapped(_:))
         return view
     }()
@@ -22,7 +22,9 @@ class AppDelegate: NSObject, NSApplicationDelegate {
         view.behavior = .transient
         view.appearance = NSAppearance(named: .vibrantLight)
         let apps = Array(AlliancesManager.shared.myApps.prefix(5))
-        view.contentViewController = NSHostingController(rootView: StatusView(apps))
+        let hoster = NSHostingController(rootView: StatusView(apps))
+        view.contentViewController = hoster
+        view.contentSize = .init(width: 400, height: 600)
         return view
     }()
         
@@ -36,7 +38,8 @@ class AppDelegate: NSObject, NSApplicationDelegate {
     }
     
     @objc private func popoverButtonTapped(_ sender: NSStatusBarButton) {
-        popover.show(relativeTo: sender.bounds, of: sender, preferredEdge: NSRectEdge.maxY)
+        self.popover.show(relativeTo: sender.bounds, of: sender, preferredEdge: NSRectEdge.minY)
+        NSApp.activate(ignoringOtherApps: true)
     }
 
 }
