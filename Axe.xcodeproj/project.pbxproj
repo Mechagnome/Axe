@@ -13,6 +13,7 @@
 		CD14BF46271ED29A006141A1 /* StatusCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD14BF45271ED29A006141A1 /* StatusCell.swift */; };
 		CD5C08B4272026CD000E0305 /* RoundedCorners.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD5C08B3272026CD000E0305 /* RoundedCorners.swift */; };
 		CD5C08B62721035B000E0305 /* StatusPreferencesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD5C08B52721035B000E0305 /* StatusPreferencesView.swift */; };
+		CD9B26BB2732A7C500FE2629 /* Lancer in Frameworks */ = {isa = PBXBuildFile; productRef = CD9B26BA2732A7C500FE2629 /* Lancer */; };
 		CDBF282F272D58A700479505 /* AppWindow.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDBF282E272D58A700479505 /* AppWindow.swift */; };
 		CDBF2834272FDCA700479505 /* Lancer in Frameworks */ = {isa = PBXBuildFile; productRef = CDBF2833272FDCA700479505 /* Lancer */; };
 		CDC51369272118FB0091A378 /* ModularizationHelper in Frameworks */ = {isa = PBXBuildFile; productRef = CDC51368272118FB0091A378 /* ModularizationHelper */; };
@@ -29,7 +30,6 @@
 		CDEFFC91271D8C3E0031E240 /* App.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDEFFC90271D8C3E0031E240 /* App.swift */; };
 		CDEFFC94271D94450031E240 /* Alliances in Frameworks */ = {isa = PBXBuildFile; productRef = CDEFFC93271D94450031E240 /* Alliances */; };
 		CDEFFC96271E9D1F0031E240 /* AlliancesManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDEFFC95271E9D1F0031E240 /* AlliancesManager.swift */; };
-		CDFA28962730D56E00093468 /* Lancer in Frameworks */ = {isa = PBXBuildFile; productRef = CDFA28952730D56E00093468 /* Lancer */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -61,7 +61,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				CDBF2834272FDCA700479505 /* Lancer in Frameworks */,
-				CDFA28962730D56E00093468 /* Lancer in Frameworks */,
+				CD9B26BB2732A7C500FE2629 /* Lancer in Frameworks */,
 				CDEFFC94271D94450031E240 /* Alliances in Frameworks */,
 				CDC51369272118FB0091A378 /* ModularizationHelper in Frameworks */,
 				CDC5137C2722695F0091A378 /* Stenographer in Frameworks */,
@@ -176,7 +176,7 @@
 				CDC51368272118FB0091A378 /* ModularizationHelper */,
 				CDC5137B2722695F0091A378 /* Stenographer */,
 				CDBF2833272FDCA700479505 /* Lancer */,
-				CDFA28952730D56E00093468 /* Lancer */,
+				CD9B26BA2732A7C500FE2629 /* Lancer */,
 			);
 			productName = Axe;
 			productReference = CDEFFC7C271D87470031E240 /* Axe.app */;
@@ -211,7 +211,7 @@
 				CD14BF3C271EB7A3006141A1 /* XCRemoteSwiftPackageReference "Stem" */,
 				CDC51367272118FB0091A378 /* XCRemoteSwiftPackageReference "ModularizationHelper" */,
 				CDC5137A2722695F0091A378 /* XCRemoteSwiftPackageReference "Stenographer" */,
-				CDFA28942730D56E00093468 /* XCRemoteSwiftPackageReference "Lancer" */,
+				CD9B26B92732A7C500FE2629 /* XCRemoteSwiftPackageReference "Lancer" */,
 			);
 			productRefGroup = CDEFFC7D271D87470031E240 /* Products */;
 			projectDirPath = "";
@@ -391,6 +391,7 @@
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = Axe/Info.plist;
+				INFOPLIST_KEY_NSAppleEventsUsageDescription = "Run Scripts";
 				INFOPLIST_KEY_NSHumanReadableCopyright = "";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -398,7 +399,7 @@
 				);
 				MACOSX_DEPLOYMENT_TARGET = 11.0;
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = axe.mechagnome.com.Axe;
+				PRODUCT_BUNDLE_IDENTIFIER = axe.mechagnome.com;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
@@ -421,6 +422,7 @@
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = Axe/Info.plist;
+				INFOPLIST_KEY_NSAppleEventsUsageDescription = "Run Scripts";
 				INFOPLIST_KEY_NSHumanReadableCopyright = "";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -428,7 +430,7 @@
 				);
 				MACOSX_DEPLOYMENT_TARGET = 11.0;
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = axe.mechagnome.com.Axe;
+				PRODUCT_BUNDLE_IDENTIFIER = axe.mechagnome.com;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
@@ -467,6 +469,14 @@
 				minimumVersion = 1.0.1;
 			};
 		};
+		CD9B26B92732A7C500FE2629 /* XCRemoteSwiftPackageReference "Lancer" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/Mechagnome/Lancer";
+			requirement = {
+				branch = master;
+				kind = branch;
+			};
+		};
 		CDC51367272118FB0091A378 /* XCRemoteSwiftPackageReference "ModularizationHelper" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/Mechagnome/ModularizationHelper.git";
@@ -491,14 +501,6 @@
 				minimumVersion = 1.0.0;
 			};
 		};
-		CDFA28942730D56E00093468 /* XCRemoteSwiftPackageReference "Lancer" */ = {
-			isa = XCRemoteSwiftPackageReference;
-			repositoryURL = "https://github.com/Mechagnome/Lancer";
-			requirement = {
-				branch = master;
-				kind = branch;
-			};
-		};
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
@@ -506,6 +508,11 @@
 			isa = XCSwiftPackageProductDependency;
 			package = CD14BF3C271EB7A3006141A1 /* XCRemoteSwiftPackageReference "Stem" */;
 			productName = Stem;
+		};
+		CD9B26BA2732A7C500FE2629 /* Lancer */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = CD9B26B92732A7C500FE2629 /* XCRemoteSwiftPackageReference "Lancer" */;
+			productName = Lancer;
 		};
 		CDBF2833272FDCA700479505 /* Lancer */ = {
 			isa = XCSwiftPackageProductDependency;
@@ -525,11 +532,6 @@
 			isa = XCSwiftPackageProductDependency;
 			package = CDEFFC92271D94450031E240 /* XCRemoteSwiftPackageReference "Alliances" */;
 			productName = Alliances;
-		};
-		CDFA28952730D56E00093468 /* Lancer */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = CDFA28942730D56E00093468 /* XCRemoteSwiftPackageReference "Lancer" */;
-			productName = Lancer;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};
