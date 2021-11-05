@@ -43,17 +43,18 @@ struct StatusView: View {
                     .textFieldStyle(RoundedBorderTextFieldStyle())
                 StatusPreferencesView()
             }
-            .font(Font.system(size: 14))
+            .font(.body)
+            .padding()
 
             Divider()
             
             List(vm.list) { model in
                 StatusCell(model)
+                Spacer().frame(height: 8)
             }
             
             Spacer()
         }
-        .padding(.all, 12)
         .frame(minWidth: 400, minHeight: 600)
         
     }
