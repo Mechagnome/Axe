@@ -61,7 +61,7 @@ struct StatusCell: View {
     
     @State
     var isPresented = false
-    
+
     init(_ model: UserApp) {
         self.vm = ViewModel(model)
     }
@@ -69,15 +69,19 @@ struct StatusCell: View {
     private var app: AlliancesApp { vm.userApp.app }
     
     var body: some View {
-        VStack {
+        VStack(alignment: .trailing) {
+            
+
             HStack(alignment: .center) {
+                
                 VStack(alignment: .leading) {
                     Text(app.name)
                         .font(.title2)
                     
                     if let value = app.remark {
                         Text(value)
-                            .font(.title3)
+                            .fontWeight(.thin)
+                            .font(.body)
                     }
                 }
                 
@@ -85,34 +89,41 @@ struct StatusCell: View {
                 
                 HStack {
                     if app.canRun {
-                        SFSymbol.play.convert()
-                            .onTapGesture {
-                                try? app.run()
-                            }
+                        Button {
+                            try? app.run()
+                        } label: {
+                            SFSymbol.play.convert()
+                        }
                     }
                     
                     if app.canOpenSettings {
-                        SFSymbol.gear.convert()
-                            .onTapGesture {
-                                App.openSettingsWindow(vm.userApp)
-                            }
+                        Button {
+                            App.openSettingsWindow(vm.userApp)
+                        } label: {
+                            SFSymbol.gear.convert()
+                        }
                     }
                 }
-                .font(.title)
+                .buttonStyle(PlainButtonStyle())
+                .font(.title2)
             }
             
+
             if app.progress > 0, app.progress <= 1 {
+                Spacer().frame(height: 4)
                 ProgressView(value: app.progress)
             }
             
-            ForEach(vm.childApps) { app in
-                StatusCell(app)
+            if vm.childApps.isEmpty == false {
+                Spacer().frame(height: 4)
+                ForEach(vm.childApps) { app in
+                    StatusCell(app)
+                }
             }
-            
         }
-        .padding()
-        .background(RoundedCorners(value: 12, color: Color.gray.opacity(0.25)))
-        .cornerRadius(15)
+        .padding(.all, 8)
+        .listRowInsets(.init())
+        .background(RoundedCorners(.all, value: 8, color: .gray.opacity(0.5)))
     }
     
 }
@@ -120,10 +131,10 @@ struct StatusCell: View {
 struct StatusCell_Previews: PreviewProvider {
     
     static var previews: some View {
-        VStack {
+        return List {
             StatusCell(TestApp.useApp)
             StatusCell(TestApp.useApp)
         }
-        .fixedSize()
+        .environment(\.defaultMinListRowHeight, 4)
     }
 }

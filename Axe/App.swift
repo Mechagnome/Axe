@@ -15,7 +15,8 @@ struct App: SwiftUI.App {
     var body: some Scene {
         WindowGroup {
             EmptyView()
-        }.windowStyle(HiddenTitleBarWindowStyle())
+        }
+        .windowStyle(HiddenTitleBarWindowStyle())
     }
     
     private static var settingsWindow: NSWindow?

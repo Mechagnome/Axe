@@ -13,16 +13,15 @@
 		CD14BF46271ED29A006141A1 /* StatusCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD14BF45271ED29A006141A1 /* StatusCell.swift */; };
 		CD5C08B4272026CD000E0305 /* RoundedCorners.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD5C08B3272026CD000E0305 /* RoundedCorners.swift */; };
 		CD5C08B62721035B000E0305 /* StatusPreferencesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD5C08B52721035B000E0305 /* StatusPreferencesView.swift */; };
-		CD9B26BB2732A7C500FE2629 /* Lancer in Frameworks */ = {isa = PBXBuildFile; productRef = CD9B26BA2732A7C500FE2629 /* Lancer */; };
+		CDB3B5192734CCBC00685FF6 /* Lancer in Frameworks */ = {isa = PBXBuildFile; productRef = CDB3B5182734CCBC00685FF6 /* Lancer */; };
+		CDB3B51C2734CCE400685FF6 /* Stenographer in Frameworks */ = {isa = PBXBuildFile; productRef = CDB3B51B2734CCE400685FF6 /* Stenographer */; };
+		CDB3B51F2734CD2800685FF6 /* ModularizationHelper in Frameworks */ = {isa = PBXBuildFile; productRef = CDB3B51E2734CD2800685FF6 /* ModularizationHelper */; };
 		CDBF282F272D58A700479505 /* AppWindow.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDBF282E272D58A700479505 /* AppWindow.swift */; };
-		CDBF2834272FDCA700479505 /* Lancer in Frameworks */ = {isa = PBXBuildFile; productRef = CDBF2833272FDCA700479505 /* Lancer */; };
-		CDC51369272118FB0091A378 /* ModularizationHelper in Frameworks */ = {isa = PBXBuildFile; productRef = CDC51368272118FB0091A378 /* ModularizationHelper */; };
 		CDC5136C2721526C0091A378 /* StoreAppCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDC5136B2721526C0091A378 /* StoreAppCell.swift */; };
 		CDC5136E2721528B0091A378 /* StoreAppsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDC5136D2721528B0091A378 /* StoreAppsView.swift */; };
 		CDC51371272153420091A378 /* TestApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDC51370272153420091A378 /* TestApp.swift */; };
 		CDC51377272253C40091A378 /* UninstallAppCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDC51376272253C40091A378 /* UninstallAppCell.swift */; };
 		CDC51379272255B90091A378 /* UninstallAppsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDC51378272255B90091A378 /* UninstallAppsView.swift */; };
-		CDC5137C2722695F0091A378 /* Stenographer in Frameworks */ = {isa = PBXBuildFile; productRef = CDC5137B2722695F0091A378 /* Stenographer */; };
 		CDEFFC82271D87470031E240 /* StatusView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDEFFC81271D87470031E240 /* StatusView.swift */; };
 		CDEFFC84271D874A0031E240 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CDEFFC83271D874A0031E240 /* Assets.xcassets */; };
 		CDEFFC87271D874A0031E240 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CDEFFC86271D874A0031E240 /* Preview Assets.xcassets */; };
@@ -60,11 +59,10 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				CDBF2834272FDCA700479505 /* Lancer in Frameworks */,
-				CD9B26BB2732A7C500FE2629 /* Lancer in Frameworks */,
 				CDEFFC94271D94450031E240 /* Alliances in Frameworks */,
-				CDC51369272118FB0091A378 /* ModularizationHelper in Frameworks */,
-				CDC5137C2722695F0091A378 /* Stenographer in Frameworks */,
+				CDB3B5192734CCBC00685FF6 /* Lancer in Frameworks */,
+				CDB3B51C2734CCE400685FF6 /* Stenographer in Frameworks */,
+				CDB3B51F2734CD2800685FF6 /* ModularizationHelper in Frameworks */,
 				CD14BF3E271EB7A3006141A1 /* Stem in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -173,10 +171,9 @@
 			packageProductDependencies = (
 				CDEFFC93271D94450031E240 /* Alliances */,
 				CD14BF3D271EB7A3006141A1 /* Stem */,
-				CDC51368272118FB0091A378 /* ModularizationHelper */,
-				CDC5137B2722695F0091A378 /* Stenographer */,
-				CDBF2833272FDCA700479505 /* Lancer */,
-				CD9B26BA2732A7C500FE2629 /* Lancer */,
+				CDB3B5182734CCBC00685FF6 /* Lancer */,
+				CDB3B51B2734CCE400685FF6 /* Stenographer */,
+				CDB3B51E2734CD2800685FF6 /* ModularizationHelper */,
 			);
 			productName = Axe;
 			productReference = CDEFFC7C271D87470031E240 /* Axe.app */;
@@ -209,9 +206,9 @@
 			packageReferences = (
 				CDEFFC92271D94450031E240 /* XCRemoteSwiftPackageReference "Alliances" */,
 				CD14BF3C271EB7A3006141A1 /* XCRemoteSwiftPackageReference "Stem" */,
-				CDC51367272118FB0091A378 /* XCRemoteSwiftPackageReference "ModularizationHelper" */,
-				CDC5137A2722695F0091A378 /* XCRemoteSwiftPackageReference "Stenographer" */,
-				CD9B26B92732A7C500FE2629 /* XCRemoteSwiftPackageReference "Lancer" */,
+				CDB3B5172734CCBC00685FF6 /* XCRemoteSwiftPackageReference "Lancer" */,
+				CDB3B51A2734CCE400685FF6 /* XCRemoteSwiftPackageReference "Stenographer" */,
+				CDB3B51D2734CD2800685FF6 /* XCRemoteSwiftPackageReference "ModularizationHelper" */,
 			);
 			productRefGroup = CDEFFC7D271D87470031E240 /* Products */;
 			projectDirPath = "";
@@ -381,7 +378,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_ENTITLEMENTS = Axe/Axe.entitlements;
-				CODE_SIGN_IDENTITY = "-";
+				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
 				CURRENT_PROJECT_VERSION = 1;
@@ -412,7 +409,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_ENTITLEMENTS = Axe/Axe.entitlements;
-				CODE_SIGN_IDENTITY = "-";
+				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
 				CURRENT_PROJECT_VERSION = 1;
@@ -465,11 +462,11 @@
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/linhay/Stem.git";
 			requirement = {
-				kind = upToNextMajorVersion;
-				minimumVersion = 1.0.1;
+				branch = master;
+				kind = branch;
 			};
 		};
-		CD9B26B92732A7C500FE2629 /* XCRemoteSwiftPackageReference "Lancer" */ = {
+		CDB3B5172734CCBC00685FF6 /* XCRemoteSwiftPackageReference "Lancer" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/Mechagnome/Lancer";
 			requirement = {
@@ -477,17 +474,17 @@
 				kind = branch;
 			};
 		};
-		CDC51367272118FB0091A378 /* XCRemoteSwiftPackageReference "ModularizationHelper" */ = {
+		CDB3B51A2734CCE400685FF6 /* XCRemoteSwiftPackageReference "Stenographer" */ = {
 			isa = XCRemoteSwiftPackageReference;
-			repositoryURL = "https://github.com/Mechagnome/ModularizationHelper.git";
+			repositoryURL = "https://github.com/Mechagnome/Stenographer.git";
 			requirement = {
 				branch = master;
 				kind = branch;
 			};
 		};
-		CDC5137A2722695F0091A378 /* XCRemoteSwiftPackageReference "Stenographer" */ = {
+		CDB3B51D2734CD2800685FF6 /* XCRemoteSwiftPackageReference "ModularizationHelper" */ = {
 			isa = XCRemoteSwiftPackageReference;
-			repositoryURL = "https://github.com/Mechagnome/Stenographer.git";
+			repositoryURL = "https://github.com/Mechagnome/ModularizationHelper.git";
 			requirement = {
 				branch = master;
 				kind = branch;
@@ -509,24 +506,20 @@
 			package = CD14BF3C271EB7A3006141A1 /* XCRemoteSwiftPackageReference "Stem" */;
 			productName = Stem;
 		};
-		CD9B26BA2732A7C500FE2629 /* Lancer */ = {
+		CDB3B5182734CCBC00685FF6 /* Lancer */ = {
 			isa = XCSwiftPackageProductDependency;
-			package = CD9B26B92732A7C500FE2629 /* XCRemoteSwiftPackageReference "Lancer" */;
+			package = CDB3B5172734CCBC00685FF6 /* XCRemoteSwiftPackageReference "Lancer" */;
 			productName = Lancer;
 		};
-		CDBF2833272FDCA700479505 /* Lancer */ = {
+		CDB3B51B2734CCE400685FF6 /* Stenographer */ = {
 			isa = XCSwiftPackageProductDependency;
-			productName = Lancer;
-		};
-		CDC51368272118FB0091A378 /* ModularizationHelper */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = CDC51367272118FB0091A378 /* XCRemoteSwiftPackageReference "ModularizationHelper" */;
-			productName = ModularizationHelper;
-		};
-		CDC5137B2722695F0091A378 /* Stenographer */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = CDC5137A2722695F0091A378 /* XCRemoteSwiftPackageReference "Stenographer" */;
+			package = CDB3B51A2734CCE400685FF6 /* XCRemoteSwiftPackageReference "Stenographer" */;
 			productName = Stenographer;
+		};
+		CDB3B51E2734CD2800685FF6 /* ModularizationHelper */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = CDB3B51D2734CD2800685FF6 /* XCRemoteSwiftPackageReference "ModularizationHelper" */;
+			productName = ModularizationHelper;
 		};
 		CDEFFC93271D94450031E240 /* Alliances */ = {
 			isa = XCSwiftPackageProductDependency;

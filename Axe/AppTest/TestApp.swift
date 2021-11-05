@@ -62,6 +62,7 @@ extension TestApp {
         
         public init(_ configuration: AlliancesConfiguration) {
             self.configuration = configuration
+//            self.tasks = [ChildApp2(.init(from: configuration, app: ChildApp2.self))]
         }
         
         public func run() throws {
@@ -70,4 +71,25 @@ extension TestApp {
         }
     }
     
+    public struct ChildApp2: AlliancesApp {
+        
+        public static var appInfo: AppInfo = .init(id: "ChildApp2", name: "ChildApp")
+        
+        public static let bundleID: String = UUID().uuidString
+        public var core: AlliancesUICore = .init()
+        public var configuration: AlliancesConfiguration
+        
+        public var name: String { Self.bundleID }
+        public var remark: String? { "remark" }
+        public var tasks: [AlliancesApp] = []
+        
+        public init(_ configuration: AlliancesConfiguration) {
+            self.configuration = configuration
+        }
+        
+        public func run() throws {
+            progress += 0.05
+            show(view: AnyView(Text("66666666")))
+        }
+    }
 }
