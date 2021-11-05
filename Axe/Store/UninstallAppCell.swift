@@ -17,7 +17,7 @@ struct UninstallAppCell: View {
         init(app: UserApp) {
             self.app = app
         }
-
+        
     }
     
     @ObservedObject
@@ -29,11 +29,18 @@ struct UninstallAppCell: View {
     
     var body: some View {
         HStack {
-            VStack(alignment: .leading) {
+            VStack(alignment: .leading, spacing: 4.0) {
                 Text(vm.app.appInfo.name)
+                    .fontWeight(.medium)
                     .font(.title)
-                Text(vm.app.appInfo.summary)
-                    .font(.body)
+                HStack {
+                    Text(vm.app.app.name)
+                        .lineLimit(1)
+                    if let text = vm.app.app.remark {
+                        Text(text)
+                    }
+                }
+                .font(.body)
             }
             Spacer()
             SFSymbol.trashCircle.convert()

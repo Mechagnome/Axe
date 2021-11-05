@@ -40,11 +40,13 @@ struct StatusCell: View {
             }.store(in: &cancellables)
             
             userApp.app.core.showSettingsView.sink { _ in
-                App.openSettingsWindow(userApp)
+                App.openWindow(for: .settings(app: userApp))
             }.store(in: &cancellables)
             
             userApp.app.core.showView.sink { view in
-                App.openInWindow(title: userApp.app.name, sender: view)
+                App.openWindow(for: .others(ID: userApp.id.uuidString,
+                                            title: userApp.app.name,
+                                            view: view))
             }.store(in: &cancellables)
         }
         
@@ -98,7 +100,7 @@ struct StatusCell: View {
                     
                     if app.canOpenSettings {
                         Button {
-                            App.openSettingsWindow(vm.userApp)
+                            App.openWindow(for: .settings(app: vm.userApp))
                         } label: {
                             SFSymbol.gear.convert()
                         }

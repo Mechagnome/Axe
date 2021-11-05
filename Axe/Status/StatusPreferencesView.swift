@@ -44,11 +44,11 @@ extension StatusPreferencesView {
 private extension StatusPreferencesView {
 
     func storeApps() {
-        App.openInWindow(title: "App Store", sender: .init(StoreAppsView()))
+        App.openWindow(for: .appSotre(view: .init(StoreAppsView())))
     }
     
     func unstallApps() {
-        App.openInWindow(title: "UnstallApps", sender: .init(UninstallAppsView()))
+        App.openWindow(for: .myApps(view: .init(UninstallAppsView())))
     }
     
     func quit() {
