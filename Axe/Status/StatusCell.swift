@@ -92,7 +92,11 @@ struct StatusCell: View {
                 HStack {
                     if app.canRun {
                         Button {
-                            try? app.run()
+                            do {
+                                try app.run()
+                            } catch {
+                                App.alert(error.localizedDescription)
+                            }
                         } label: {
                             SFSymbol.play.convert()
                         }

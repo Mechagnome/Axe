@@ -34,7 +34,6 @@ struct StatusView: View {
     @ObservedObject
     var vm: ViewModel
     
-    
     init(_ list: [UserApp]) {
         vm = .init(list)
     }

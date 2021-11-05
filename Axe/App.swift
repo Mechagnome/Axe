@@ -24,6 +24,20 @@ struct App: SwiftUI.App {
 }
 
 extension App {
+
+   static func alert(_ message: String, informative: String = "") {
+        let alert = NSAlert()
+        alert.messageText = message
+        alert.informativeText = informative
+        alert.addButton(withTitle: "OK")
+        alert.addButton(withTitle: "Cancel")
+        alert.alertStyle = .warning
+        alert.runModal()
+    }
+    
+}
+
+extension App {
     
     class Windows {
         
