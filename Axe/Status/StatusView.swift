@@ -20,6 +20,10 @@ struct StatusView: View {
         var searchTerm = ""
 
         init(_ list: [UserApp]) {
+            self.list = list
+            if Device.isPreviews {
+                return
+            }
             AlliancesManager.shared.myAppsDidChanged.sink { apps in
                 self.list = apps
                 self.objectWillChange.send()
